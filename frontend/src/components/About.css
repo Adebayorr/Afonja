@@ -1,0 +1,54 @@
+.about {
+  background: var(--green-050);
+}
+
+.about__row {
+  display: grid;
+  gap: 40px;
+}
+
+.about__copy h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+  max-width: 18ch;
+}
+
+.about__copy p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  max-width: 60ch;
+}
+
+.pillars {
+  display: grid;
+  gap: 16px;
+}
+
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+}
+
+.pillar-card h3 {
+  font-size: 1.08rem;
+  color: var(--green-800, var(--green-900));
+}
+
+.pillar-card p {
+  color: var(--ink-soft);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 860px) {
+  .about__row {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 60px;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  background-color: var(--green-400);
+  background-image: none; /* overridden inline */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Pinned to the right edge so the full product cluster stays in frame on
+     narrow screens, no matter how much the image gets cropped horizontally. */
+  background-position: right center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Mobile default: flat mid-strength black overlay across the whole hero,
+     since the product side of the image gets cropped and can sit behind the text. */
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .hero::before {
+    /* Larger screens show the full image, so go back to the directional
+       gradient that fades out over the product side. */
+    background: linear-gradient(
+      100deg,
+      rgba(5, 40, 10, 0.62) 0%,
+      rgba(5, 40, 10, 0.42) 38%,
+      rgba(5, 40, 10, 0.14) 62%,
+      rgba(5, 40, 10, 0) 80%
+    );
+  }
+}
+
+.hero__row {
+  position: relative;
+  z-index: 2;
+  padding: 72px 0;
+}
+
+.hero__copy {
+  max-width: 520px;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 5.2vw, 2.6rem);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  margin-bottom: 14px;
+}
+
+.hero__lead {
+  color: var(--white);
+  opacity: 0.95;
+  font-size: 0.92rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  max-width: 40ch;
+  margin-bottom: 28px;
+}
+
+.hero .btn-primary {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  color: var(--white);
+  backdrop-filter: blur(2px);
+}
+
+.hero .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 640px) {
+  .hero {
+    min-height: 440px;
+  }
+
+  .hero__lead {
+    font-size: 0.98rem;
+  }
+}
+
+@media (min-width: 860px) {
+  .hero {
+    min-height: 520px;
+    background-position: center;
+  }
+
+  .hero__row {
+    padding: 100px 0;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,325 @@
+[
+  {
+    "id": "chicken-wings",
+    "name": "Chicken Wings",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1750
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 3500
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "chicken-laps",
+    "name": "Chicken Laps",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1600
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 3200
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "chicken-gizzard",
+    "name": "Chicken Gizzard",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2000
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 4000
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "chicken-neck",
+    "name": "Chicken Neck",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 900
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 1800
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "turkey-wings",
+    "name": "Turkey Wings",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2250
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 4500
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "turkey-laps",
+    "name": "Turkey Laps",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2400
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 4800
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "turkey-fingers",
+    "name": "Turkey Fingers",
+    "category": "poultry",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2100
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 4200
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "titus",
+    "name": "Titus Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1500
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 3000
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "mullet",
+    "name": "Mullet Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1400
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 2800
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "hake",
+    "name": "Hake Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1600
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 3200
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "shawa",
+    "name": "Shawa (Herring)",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1250
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 2500
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "kote",
+    "name": "Kote Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1350
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 2700
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "satin",
+    "name": "Satin Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1500
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 3000
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "express",
+    "name": "Express Fish",
+    "category": "fish",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 1450
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 2900
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "cow-meat",
+    "name": "Cow Meat",
+    "category": "beef-goat",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2250
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 4500
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "goat-meat",
+    "name": "Goat Meat",
+    "category": "beef-goat",
+    "soldBy": "weight",
+    "options": [
+      {
+        "id": "0.5kg",
+        "label": "½kg",
+        "price": 2750
+      },
+      {
+        "id": "1kg",
+        "label": "1kg",
+        "price": 5500
+      }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "ponmo",
+    "name": "Ponmo",
+    "category": "ponmo",
+    "soldBy": "unit",
+    "options": [
+      {
+        "id": "500",
+        "label": "½kg pack",
+        "price": 1000
+      },
+      {
+        "id": "1000",
+        "label": "1kg pack",
+        "price": 1800
+      }
+    ],
+    "inStock": true
+  }
+]

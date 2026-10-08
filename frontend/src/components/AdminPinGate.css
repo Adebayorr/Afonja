@@ -1,0 +1,62 @@
+.pin-gate {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: var(--green-900);
+  padding: 24px;
+}
+
+.pin-gate__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: var(--shadow-pop);
+}
+
+.pin-gate__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--green-700);
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.pin-gate__card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.pin-gate__card p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0 auto 20px;
+}
+
+.pin-gate__card input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.pin-gate__card input:focus {
+  border-color: var(--green-500);
+  outline: none;
+}
+
+.pin-gate__error {
+  color: var(--rust-600);
+  font-size: 0.85rem;
+  margin: -6px 0 14px;
+}

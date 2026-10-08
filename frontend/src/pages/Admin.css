@@ -1,0 +1,227 @@
+.admin-page {
+  min-height: 100dvh;
+  background: var(--paper-dim);
+  padding-bottom: 100px;
+}
+
+.admin-loading {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  color: var(--ink-soft);
+}
+
+.admin-header {
+  background: var(--green-900);
+  color: var(--white);
+  padding: 28px 0;
+}
+
+.admin-header__row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.admin-header h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.admin-header p {
+  color: var(--green-100);
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.admin-header .btn-outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.admin-header .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.admin-header__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-banner {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.admin-banner--warn {
+  background: var(--rust-100);
+  color: var(--rust-600);
+}
+
+.admin-banner code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.admin-table {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.admin-product {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.admin-product__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-product__head h2 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.admin-product__category {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.stock-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.stock-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.stock-toggle__track {
+  width: 38px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  background: var(--line);
+  position: relative;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+
+.stock-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--white);
+  transition: transform 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.stock-toggle input:checked + .stock-toggle__track {
+  background: var(--green-600);
+}
+
+.stock-toggle input:checked + .stock-toggle__track .stock-toggle__thumb {
+  transform: translateX(16px);
+}
+
+.admin-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.admin-option {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  background: var(--paper);
+}
+
+.admin-option__label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.admin-option__price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  color: var(--green-800, var(--green-900));
+}
+
+.admin-option__price input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  font-family: var(--font-body);
+  color: inherit;
+}
+
+.admin-option__price input:focus {
+  outline: none;
+}
+
+.admin-savebar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--green-900);
+  color: var(--white);
+  transform: translateY(100%);
+  transition: transform 0.2s ease;
+  z-index: 40;
+  box-shadow: 0 -10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.admin-savebar.is-visible {
+  transform: translateY(0);
+}
+
+.admin-savebar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .admin-header__row {
+    flex-direction: row;
+    align-items: center;
+  }
+}

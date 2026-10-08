@@ -1,0 +1,224 @@
+/* ===================================================================
+   Afonja Frozen Foods — Design tokens
+   Palette drawn from the brand hero art:
+     - deep green (border/ink accent) sampled at #016A00
+     - fresh green (hero background) sampled at #72C068
+   A cool "frost" tone is layered in to carry the frozen-food cue,
+   and a warm rust is reserved for scarcity/urgency states only.
+=================================================================== */
+:root {
+  --green-900: #0c3d13;
+  --green-700: #16651f;
+  --green-600: #227a2b;
+  --green-500: #3f9a3f;
+  --green-400: #72c068;
+  --green-100: #e6f3e2;
+  --green-050: #f3f9f1;
+
+  --frost-500: #4aa8b8;
+  --frost-100: #e3f2f4;
+
+  --rust-600: #a8451f;
+  --rust-100: #fbe9e0;
+
+  --whatsapp: #25d366;
+  --whatsapp-dark: #128c3e;
+
+  --ink: #16211a;
+  --ink-soft: #435146;
+  --paper: #fbfaf6;
+  --paper-dim: #f2f1ea;
+  --line: #dfe3da;
+  --white: #ffffff;
+
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 26px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(12, 61, 19, 0.06), 0 8px 24px -12px rgba(12, 61, 19, 0.18);
+  --shadow-pop: 0 12px 40px -8px rgba(12, 61, 19, 0.28);
+
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--green-900);
+  margin: 0 0 0.4em;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 62ch;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--frost-500);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 860px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+.section {
+  padding: 64px 0;
+}
+
+@media (min-width: 860px) {
+  .section {
+    padding: 96px 0;
+  }
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--green-600);
+  margin-bottom: 10px;
+}
+
+.section-head h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+/* Buttons ---------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-pill);
+  padding: 13px 26px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--green-700);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--green-900);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--green-700);
+  color: var(--green-900);
+}
+
+.btn-outline:hover {
+  background: var(--green-050);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: var(--white);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-dark);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.88rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -1,0 +1,16 @@
+name = "afonja-inventory"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# Create this KV namespace with:
+#   wrangler kv namespace create PRODUCTS_KV
+# then paste the id it prints below.
+[[kv_namespaces]]
+binding = "PRODUCTS_KV"
+id = "f1b442e77cc44551b9413728db8cc3ae"
+
+# Set the real values with:
+#   wrangler secret put ADMIN_PIN
+# Vars below are non-secret defaults for local `wrangler dev` only.
+[vars]
+ALLOWED_ORIGIN = "https://afonja.ng,https://www.afonja.ng"
