@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className="container hero__row">
         <div className="hero__copy">
-          <h1>Hungry? Need meat? Don't go to the market.</h1>
+          <h1>Need fish? Skip the market.</h1>
           <p className="hero__lead">
             Fresh meat and fish delivered straight to your door across Oyo town. 
             Order only what you need. 
