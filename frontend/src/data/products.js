@@ -3,24 +3,24 @@
 // from KV. The app always tries the live API first and falls back to this
 // file if the API is unreachable, so the site still works offline/in dev.
 
-import chickenWings from "../assets/products/chicken-wings.png";
-import chickenLaps from "../assets/products/chicken-laps.png";
-import chickenGizzard from "../assets/products/chicken-gizzard.png";
-import chickenNeck from "../assets/products/chicken-neck.png";
-import turkeyWings from "../assets/products/turkey-wings.png";
-import turkeyLaps from "../assets/products/turkey-laps.png";
-import turkeyFingers from "../assets/products/turkey-fingers.png";
-import titus from "../assets/products/titus.png";
-import mullet from "../assets/products/mullet.png";
-import hake from "../assets/products/hake.png";
-import shawa from "../assets/products/shawa-herring.png";
-import kote from "../assets/products/kote.png";
-import satin from "../assets/products/satin.png";
-import express from "../assets/products/express.png";
-import cowMeat from "../assets/products/cow-meat.png";
-import goatMeat from "../assets/products/goat-meat.png";
-import ponmo500 from "../assets/products/ponmo-500.png";
-import ponmo1000 from "../assets/products/ponmo-1000.png";
+import chickenWings from "../assets/products/chicken-wings.webp";
+import chickenLaps from "../assets/products/chicken-laps.webp";
+import chickenGizzard from "../assets/products/chicken-gizzard.webp";
+import chickenNeck from "../assets/products/chicken-neck.webp";
+import turkeyWings from "../assets/products/turkey-wings.webp";
+import turkeyLaps from "../assets/products/turkey-laps.webp";
+import turkeyFingers from "../assets/products/turkey-fingers.webp";
+import titus from "../assets/products/titus.webp";
+import mullet from "../assets/products/mullet.webp";
+import hake from "../assets/products/hake.webp";
+import shawa from "../assets/products/shawa-herring.webp";
+import kote from "../assets/products/kote.webp";
+import satin from "../assets/products/satin.webp";
+import express from "../assets/products/express.webp";
+import cowMeat from "../assets/products/cow-meat.webp";
+import goatMeat from "../assets/products/goat-meat.webp";
+import ponmo500 from "../assets/products/ponmo-500.webp";
+import ponmo1000 from "../assets/products/ponmo-1000.webp";
 
 // Standard weight ladder used by every weight-sold product (in kg).
 export const WEIGHT_STEPS = [0.5, 1];

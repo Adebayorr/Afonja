@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 import { BUSINESS } from "../config";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import "./Header.css";
 
 const NAV_LINKS = [
