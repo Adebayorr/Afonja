@@ -74,9 +74,7 @@ export default function ProductCard({ product, variant = "green" }) {
             : justAdded
             ? "Added ✓"
             : cartQtyForSelection > 1
-            ? `+1 (${cartQtyForSelection} in cart)`
-            : cartQtyForSelection
-            ? "+1 more (1 in cart)"
+            ? `Add more`
             : "Add to cart"}
         </button>
       </div>
