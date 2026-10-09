@@ -44,7 +44,7 @@ export default function CartDrawer() {
             <ul className="cart-list">
               {items.map((line) => (
                 <li className="cart-line" key={line.key}>
-                  <img src={line.image} alt="" className="cart-line__img" />
+                  <img src={line.image} alt="" width="56" height="56" className="cart-line__img" decoding="async" />
                   <div className="cart-line__body">
                     <p className="cart-line__name">{line.name}</p>
                     <p className="cart-line__option">{line.optionLabel}</p>

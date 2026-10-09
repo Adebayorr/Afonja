@@ -44,7 +44,14 @@ export default function Header() {
         </a>
 
         <a href="#home" className="brand" onClick={() => handleNavClick("#home")}>
-          <img className="brand__logo" src={logo} alt="Afonja Frozen Foods" />
+          <img
+            className="brand__logo"
+            src={logo}
+            alt="Afonja Frozen Foods"
+            width="696"
+            height="261"
+            fetchpriority="high"
+          />
         </a>
 
         <div className="site-header__actions">

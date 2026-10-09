@@ -1,11 +1,10 @@
-import heroImage from "../assets/hero-image.webp";
 import "./Hero.css";
 
 export default function Hero() {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      style={{ backgroundImage: `url(/hero-image.webp)` }}
     >
       <div className="container hero__row">
         <div className="hero__copy">

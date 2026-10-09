@@ -36,7 +36,14 @@ export default function ProductCard({ product, variant = "green" }) {
   return (
     <article className={`product-card product-card--${variant} ${!product.inStock ? "is-out" : ""}`}>
       <div className="product-card__media">
-        <img src={displayImage} alt={product.name} loading="lazy" />
+        <img
+          src={displayImage}
+          alt={product.name}
+          width="500"
+          height="500"
+          loading="lazy"
+          decoding="async"
+        />
         {!product.inStock && <span className="product-card__ribbon">Out of stock</span>}
       </div>
 
