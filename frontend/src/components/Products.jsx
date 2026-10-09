@@ -6,9 +6,31 @@ import "./Products.css";
 export default function Products({ products }) {
   const [activeCategory, setActiveCategory] = useState("all");
 
+  // Available products first, out-of-stock ones last. Within each group the
+  // cards are interleaved by their image backdrop (green / gray) so the
+  // alternating look is preserved, continuing the pattern across the two groups.
   const visible = useMemo(() => {
-    if (activeCategory === "all") return products;
-    return products.filter((p) => p.category === activeCategory);
+    const list =
+      activeCategory === "all" ? products : products.filter((p) => p.category === activeCategory);
+
+    const queues = {
+      available: list.filter((p) => p.inStock),
+      unavailable: list.filter((p) => !p.inStock),
+    };
+
+    const result = [];
+    let want = "green";
+    for (const group of [queues.available, queues.unavailable]) {
+      const pool = [...group];
+      while (pool.length) {
+        let i = pool.findIndex((p) => p.tone === want);
+        if (i === -1) i = 0; // no more of that colour — just take the next one
+        const [next] = pool.splice(i, 1);
+        result.push(next);
+        want = next.tone === "green" ? "gray" : "green";
+      }
+    }
+    return result;
   }, [products, activeCategory]);
 
   return (
@@ -36,8 +58,8 @@ export default function Products({ products }) {
 
         {visible.length > 0 ? (
           <div className="product-grid">
-            {visible.map((product, index) => (
-              <ProductCard key={product.id} product={product} variant={index % 2 === 0 ? "green" : "white"} />
+            {visible.map((product) => (
+              <ProductCard key={product.id} product={product} variant={product.tone === "gray" ? "white" : "green"} />
             ))}
           </div>
         ) : (

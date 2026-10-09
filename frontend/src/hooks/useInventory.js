@@ -13,6 +13,7 @@ function mergeWithLocalImages(remoteProducts) {
     return {
       ...remote,
       image: local?.image ?? null,
+      tone: local?.tone ?? remote.tone ?? null,
       options: remote.options.map((opt, i) => ({
         ...opt,
         image: opt.image ?? local?.options?.[i]?.image ?? local?.image ?? null,
