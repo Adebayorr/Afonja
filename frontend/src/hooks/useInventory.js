@@ -8,7 +8,11 @@ import { API_URL } from "../config";
 // Worker only ever needs to own text data (name, price, inStock).
 function mergeWithLocalImages(remoteProducts) {
   const byId = new Map(PRODUCTS.map((p) => [p.id, p]));
-  return remoteProducts.map((remote) => {
+  // Products added to the codebase after the KV catalog was first saved
+  // aren't in the live data yet — append them so they still show up.
+  const remoteIds = new Set(remoteProducts.map((r) => r.id));
+  const missingLocal = PRODUCTS.filter((p) => !remoteIds.has(p.id));
+  const merged = remoteProducts.map((remote) => {
     const local = byId.get(remote.id);
     return {
       ...remote,
@@ -20,6 +24,7 @@ function mergeWithLocalImages(remoteProducts) {
       })),
     };
   });
+  return [...merged, ...missingLocal];
 }
 
 export function useInventory() {

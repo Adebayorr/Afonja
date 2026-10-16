@@ -10,6 +10,8 @@ import chickenNeck from "../assets/products/chicken-neck.webp";
 import turkeyWings from "../assets/products/turkey-wings.webp";
 import turkeyLaps from "../assets/products/turkey-laps.webp";
 import turkeyFingers from "../assets/products/turkey-fingers.webp";
+import chickenMixed from "../assets/products/chicken-mixed-cuts.webp";
+import turkeyCuts from "../assets/products/turkey-cuts.webp";
 import titus from "../assets/products/titus.webp";
 import mullet from "../assets/products/mullet.webp";
 import hake from "../assets/products/hake.webp";
@@ -119,6 +121,26 @@ export const PRODUCTS = [
     name: "Turkey Wings",
     category: "poultry",
     image: turkeyWings,
+    tone: "green",
+    soldBy: "weight",
+    options: weightOptions(4500),
+    inStock: true,
+  },
+  {
+    id: "chicken-mixed-cuts",
+    name: "Chicken (Mixed Cuts)",
+    category: "poultry",
+    image: chickenMixed,
+    tone: "gray",
+    soldBy: "weight",
+    options: weightOptions(3500),
+    inStock: true,
+  },
+  {
+    id: "turkey-cuts",
+    name: "Turkey Cuts",
+    category: "poultry",
+    image: turkeyCuts,
     tone: "green",
     soldBy: "weight",
     options: weightOptions(4500),

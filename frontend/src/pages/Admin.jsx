@@ -19,7 +19,10 @@ export default function Admin() {
       try {
         const data = await fetchCatalog();
         if (!cancelled) {
-          setProducts(data);
+          const ids = new Set(data.map((r) => r.id));
+          const missing = SEED_PRODUCTS.filter((p) => !ids.has(p.id)).map(stripImages);
+          setProducts([...data, ...missing]);
+          if (missing.length) setDirty(true);
           setUsingLiveApi(true);
         }
       } catch {
