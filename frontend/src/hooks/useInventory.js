@@ -18,10 +18,20 @@ function mergeWithLocalImages(remoteProducts) {
       ...remote,
       image: local?.image ?? null,
       tone: local?.tone ?? remote.tone ?? null,
-      options: remote.options.map((opt, i) => ({
-        ...opt,
-        image: opt.image ?? local?.options?.[i]?.image ?? local?.image ?? null,
-      })),
+      options: remote.options.map((opt, i) => {
+        // Match by option id first so labels/images stay correct even if
+        // option order changes; fall back to position for older data.
+        const localOpt =
+          local?.options?.find((o) => o.id === opt.id) ?? local?.options?.[i];
+        return {
+          ...opt,
+          // Labels are presentation text owned by the codebase, so a label
+          // change (e.g. Ponmo "₦500" -> "Small") shows up immediately
+          // without the KV catalog needing to be re-saved.
+          label: localOpt?.label ?? opt.label,
+          image: opt.image ?? localOpt?.image ?? local?.image ?? null,
+        };
+      }),
     };
   });
   return [...merged, ...missingLocal];

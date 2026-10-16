@@ -17,7 +17,7 @@ export default function ProductCard({ product, variant = "green" }) {
     (line) => line.productId === product.id && line.optionId === selected?.id
   )?.qty;
 
-  const pillLabel = product.soldBy === "unit" ? "Pack size" : "Weight";
+  const pillLabel = product.soldBy === "unit" ? "Size" : "Weight";
   const displayImage = selected?.image || product.image;
 
   function handleAdd() {

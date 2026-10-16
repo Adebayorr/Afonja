@@ -244,8 +244,8 @@ export const PRODUCTS = [
     tone: "green",
     soldBy: "unit",
     options: [
-      { id: "500", label: "₦500", price: 500, image: ponmo500 },
-      { id: "1000", label: "₦1000", price: 1000, image: ponmo1000 },
+      { id: "500", label: "Small", price: 500, image: ponmo500 },
+      { id: "1000", label: "Big", price: 1000, image: ponmo1000 },
     ],
     inStock: true,
   },

@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="container contact__row">
         <div>
           <span className="section-kicker">SKIP THE MARKET</span>
-          <h2>You only needed meat. So why did it take all afternoon?</h2>
+          <h2>You only needed fish. So why did it take all afternoon?</h2>
           <p>
             Leave the house. &rarr; Find transport. &rarr; Get to the market. &rarr; Search around.&rarr; Negotiate. &rarr;
             Carry everything back.
